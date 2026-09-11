@@ -1,5 +1,5 @@
 {
-  "name": "cine-api-rest",
+  "name": "cine-api",
   "version": "1.0.0",
   "description": "API REST para administracion de peliculas favoritas",
   "main": "server.js",
@@ -7,8 +7,8 @@
     "start": "node --watch server.js"
   },
   "keywords": [],
-  "author": "Marcelo Soto",
-  "license": "ISC",
+  "author": "Iplacex - Marcelo Soto",
+  "license": "Apache",
   "dependencies": {
     "cors": "^2.8.6",
     "express": "^5.2.1",
