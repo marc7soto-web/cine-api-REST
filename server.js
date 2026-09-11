@@ -10,6 +10,9 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// // Asignar rutas personalizadas de peliculas al prefijo /api
+app.use("/api", peliculaRoutes);
+
 // Ruta principal
 app.get("/", (req, res) => {
   res.status(200).json({
