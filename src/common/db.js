@@ -7,6 +7,9 @@ const uri =
 // Cliente MongoDB
 const client = new MongoClient(uri);
 
+// Acceso a la base de datos cine-db mediante MongoDB Driver
+export const db = client.db("cine-db");
+
 // Función para la conexión
 export const connectDB = async () => {
   try {
