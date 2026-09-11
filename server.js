@@ -3,6 +3,8 @@ import cors from "cors";
 
 import { connectDB } from "./src/common/db.js";
 
+import peliculaRoutes from "./src/pelicula/routes.js";
+
 const app = express();
 
 // Middleware
@@ -10,8 +12,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// // Asignar rutas personalizadas de peliculas al prefijo /api
-app.use("/api", peliculaRoutes);
 
 // Ruta principal
 app.get("/", (req, res) => {
@@ -19,6 +19,9 @@ app.get("/", (req, res) => {
     mensaje: "Bienvenido al cine Iplacex",
   });
 });
+
+// Se asignan rutas personalizadas de peliculas al prefijo /api
+app.use("/api", peliculaRoutes);
 
 // Puerto
 const PORT = 3000;
