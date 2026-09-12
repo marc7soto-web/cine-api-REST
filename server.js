@@ -4,6 +4,7 @@ import cors from "cors";
 import { connectDB } from "./src/common/db.js";
 
 import peliculaRoutes from "./src/pelicula/routes.js";
+import actorRoutes from "./src/actor/routes.js";
 
 const app = express();
 
@@ -22,6 +23,9 @@ app.get("/", (req, res) => {
 
 // Se asignan rutas personalizadas de peliculas al prefijo /api
 app.use("/api", peliculaRoutes);
+
+// Asignar rutas personalizadas de actores al prefijo /api
+app.use("/api", actorRoutes);
 
 // Puerto
 const PORT = 3000;
