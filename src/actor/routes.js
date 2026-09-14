@@ -30,7 +30,7 @@ actorRoutes.get(
 
 // Obtener actores por pelicula
 actorRoutes.get(
-    "/actores/pelicula/:idPelicula",
+    "/actor/pelicula/:idPelicula",
     handleGetActoresByPeliculaIdRequest
 );
 
